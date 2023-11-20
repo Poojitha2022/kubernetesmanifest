@@ -24,14 +24,6 @@ node {
        sh 'docker tag tomcat:latest gcr.io/woven-bonbon-396818/tomcat:latest'
     }
 
-    stage('Test image') {
-  
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
-
     stage('Push image') {
         
         sh 'docker push gcr.io/woven-bonbon-396818/tomcat:latest'

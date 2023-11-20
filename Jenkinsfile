@@ -20,7 +20,8 @@ node {
 
     stage('Build image') {
        
-       app = docker.build("gcr.io/woven-bonbon-396818/tomcat")
+       sh 'docker pull tomcat:latest'
+       sh 'docker tag tomcat:latest gcr.io/woven-bonbon-396818/tomcat:latest'
     }
 
     stage('Test image') {

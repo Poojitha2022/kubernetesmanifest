@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: gcr.io/woven-bonbon-396818/tomcat:7
+        image: gcr.io/woven-bonbon-396818/tomcat:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
